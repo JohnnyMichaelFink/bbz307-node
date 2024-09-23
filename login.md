@@ -2,7 +2,7 @@
 
 ## Formular
 
-Füge in der `index.js`-Datei eine URL für dein Loginformular ein:
+Füge in der `config.js`-Datei eine URL für dein Loginformular ein:
 
 ```js
 app.get("/login", (req, res) => {
@@ -10,7 +10,7 @@ app.get("/login", (req, res) => {
 });
 ```
 
-Erstelle dann die Datei "login.mustache" und füge dort das Formular ein:
+Erstelle dann die Datei "login.handlebars" und füge dort das Formular ein:
 
 ```html
 Login
@@ -28,7 +28,7 @@ Wichtig! Die Namen der Formularfelder müssen den Spalten deiner Datenbank entsp
 ## Logincode
 
 Wenn das Formular abgeschickt wird, müssen wir nun überprüfen, ob die User das richtige Passwort verwendet haben. Du kannst dafür den folgenden Code
-in die Datei `index.js` einfügen.
+in die Datei `config.js` einfügen.
 
 ```js
 app.post("/login", upload.none(), async (req, res) => {
@@ -50,7 +50,7 @@ wenn das Login erfolgreich oder nicht erfolgreich war.
 
 Du kannst auf deinen internen Seiten nun überprüfen, ob die Besucher eingeloggt sind.
 
-Wenn du beispielsweise eine interne Seite namens `intern.mustache` hast, kannst du in der Datei `index.js` die mit einem Pfeil markierten
+Wenn du beispielsweise eine interne Seite namens `intern.handlebars` hast, kannst du in der Datei `config.js` die mit einem Pfeil markierten
 Zeilen einfügen, um zu überprüfen, ob die Besucher eingeloggt sind. Beachte, dass du unter Umständen auch in der obersten Zeile noch `async` einfügen musst.
 
 ```js
