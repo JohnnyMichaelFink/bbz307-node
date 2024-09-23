@@ -2,7 +2,7 @@
 
 ## Formular
 
-Füge in der `index.js`-Datei eine URL für dein Registrierformular ein:
+Füge in der `config.js`-Datei eine URL für dein Registrierformular ein:
 
 ```js
 app.get("/register", (req, res) => {
@@ -10,7 +10,7 @@ app.get("/register", (req, res) => {
 });
 ```
 
-Erstelle dann die Datei "register.mustache" und füge dort das Formular ein:
+Erstelle dann die Datei "register.handlebars" und füge dort das Formular ein:
 
 ```html
 Registrierung
@@ -29,7 +29,7 @@ Wichtig! Die Namen der Formularfelder müssen den Spalten deiner Datenbank entsp
 ## Registrierungscode
 
 Wenn das Formular abgeschickt wird, müssen wir nun die User in die Datenbank schreiben. Du kannst dafür den folgenden Code
-in die Datei `index.js` einfügen.
+in die Datei `config.js` einfügen.
 
 ```js
 app.post("/register", upload.none(), async (req, res) => {
