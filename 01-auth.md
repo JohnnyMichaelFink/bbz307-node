@@ -12,10 +12,14 @@ npm install bbz307
 
 eingeben.
 
-Füge dann in deiner `config.js`-Datei, direkt unter dem Teil mit `const pool = new Pool(...)` die folgende Zeile ein:
+Füge dann in deiner `config.js`-Datei, unter dem Teil mit `import sessions from "express-session";` die folgende Zeile ein:
 
 ```js
-const bbz307 = require('bbz307');
+import bbz307 from "bbz307";
+```
+
+Füge dann in deiner `config.js`-Datei, direkt unter dem Teil mit `const pool = new Pool(...)` die folgende Zeile ein:
+```js
 const login = new bbz307.Login('users', ['benutzername', 'passwort', 'profilbild'], pool);
 ```
 
