@@ -10,9 +10,9 @@ Falls die Codesandbox die Bibliothek nicht findet, kannst du auch am unteren Fen
 npm install bbz307
 ```
 
-eingeben. Damit wird die Bibliothek auch installiert und sollte unter "Dependencies" erscheinen.
+eingeben.
 
-Füge dann in deiner `index.js`-Datei, direkt unter dem Teil mit `const pool = new Pool(...)` die folgende Zeile ein:
+Füge dann in deiner `config.js`-Datei, direkt unter dem Teil mit `const pool = new Pool(...)` die folgende Zeile ein:
 
 ```js
 const bbz307 = require('bbz307');
