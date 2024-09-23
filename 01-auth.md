@@ -2,8 +2,6 @@
 
 ## Installation
 
-Füge zuerst in der Codesandbox im Menu links unter "Dependencies" die Bibliothek `bbz307` hinzu.
-
 Falls die Codesandbox die Bibliothek nicht findet, kannst du auch am unteren Fensterrand das Panel `Terminal` öffnen, und dort den Text
 
 ```bash
