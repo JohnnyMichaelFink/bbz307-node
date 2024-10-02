@@ -1,6 +1,6 @@
 # Formulare (ohne Dateiupload)
 
-Um über ein Formular Daten erfassen zu können brauchen wir zuerst eine Seite, in der das Formular angezeigt wird. Das kann entweder in einer bestehenden Mustache-Datei oder in einer neuen sein.
+Um über ein Formular Daten erfassen zu können brauchen wir zuerst eine Seite, in der das Formular angezeigt wird. Das kann entweder in einer bestehenden Handlebars-Datei oder in einer neuen sein.
 Wir gehen davon aus, dass wir eine neue Datei brauchen.
 
 Registriere zuerst in der `index.js`-Datei eine neue Seite für das Formular:
@@ -11,7 +11,7 @@ app.get('/rezept_formular', function(req, res) {
 });
 ```
 
-Erstelle dann im Ordner `views` die Datei `rezept_formular.mustache` und füge das Formular ein:
+Erstelle dann im Ordner `views` die Datei `rezept_formular.handlebars` und füge das Formular ein:
 
 ```html
 <form action="/rezept" enctype="multipart/form-data" method="post">
