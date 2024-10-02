@@ -3,7 +3,7 @@
 Um über ein Formular Daten erfassen zu können brauchen wir zuerst eine Seite, in der das Formular angezeigt wird. Das kann entweder in einer bestehenden Handlebars-Datei oder in einer neuen sein.
 Wir gehen davon aus, dass wir eine neue Datei brauchen.
 
-Registriere zuerst in der `index.js`-Datei eine neue Seite für das Formular:
+Registriere zuerst in der `config.js`-Datei eine neue Seite für das Formular:
 
 ```js
 app.get('/rezept_formular', function(req, res) {
@@ -25,7 +25,7 @@ Passe die Formularfelder so an, dass die Eingabefelder, insbesondere die `name`-
 
 Wenn das Formular abgesendet wird, wird es an die Adresse `/rezept` gesendet. Diese Adresse müssen wir noch registrieren und dann die Formulardaten in die Datenbank speichern.
 
-Füge in der Datei `index.js` den folgenden Code ein:
+Füge in der Datei `config.js` den folgenden Code ein:
 
 ```js
 app.post('/rezept', upload.none(), async function (req, res) {
@@ -40,7 +40,7 @@ Damit werden die Formularfelder `titel` und `anleitung` in die Datenbank gespeic
 * Die Spalten, die gefüllt werden sollen (hier: `titel, anleitung`)
 * Die Formularfelder, die gespeichert werden sollen (hier: `req.body.titel, req.body.anleitung`)
 
-**Hinweis:** Wenn ebenfalls erfasst werden soll, welcher User das neue Rezept erfasst hat müsst ihr die `user_id`ebenfalls in die Datenbank schreiben. Füge zu diesem Zweck stattdessen den folgenden Code in der Datei `index.js` ein: 
+**Hinweis:** Wenn ebenfalls erfasst werden soll, welcher User das neue Rezept erfasst hat müsst ihr die `user_id`ebenfalls in die Datenbank schreiben. Füge zu diesem Zweck stattdessen den folgenden Code in der Datei `config.js` ein: 
 
 ```js
 app.post('/rezept', upload.none(), async function (req, res) {
