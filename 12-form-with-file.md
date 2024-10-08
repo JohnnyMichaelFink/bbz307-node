@@ -39,8 +39,8 @@ Damit werden die Formularfelder `title` und `description` in die Datenbank gespe
 
 * Den Namen des Datei-Formularfeldes (hier: `upload.single('image')`)
 * Den Tabellennamen im SQL-Befehl (hier: `posts`)
-* Die Spalten, die gefüllt werden sollen (hier: `title, anleitung, headerfoto`)
-* Die Formularfelder, die gespeichert werden sollen (hier: `req.body.titel, req.body.anleitung, req.file.filename`). **Beachte, dass der letzte Teil (`req.file.filename`) immer gleich bleibt.**
+* Die Spalten, die gefüllt werden sollen (hier: `title, description, image`)
+* Die Formularfelder, die gespeichert werden sollen (hier: `req.body.title, req.body.description, req.file.filename`). **Beachte, dass der letzte Teil (`req.file.filename`) immer gleich bleibt.**
 
 **Hinweis:** Wenn ebenfalls erfasst werden soll, welcher User den neuen Post erfasst hat müsst ihr die `user_id`ebenfalls in die Datenbank schreiben. Füge zu diesem Zweck stattdessen den folgenden Code in der Datei `config.js` ein: 
 
@@ -58,4 +58,5 @@ Passe auch hier die folgenden Angaben an, damit sie deiner Applikation entsprech
 * Den Tabellennamen im SQL-Befehl (hier: `posts`)
 * Die Spalten, die gefüllt werden sollen (hier: `title, description, image`)
 * Die Formularfelder, die gespeichert werden sollen (hier: `req.body.title, req.body.description, req.file.filename`). Beachte, dass der letzte Teil (`req.file.filename`) immer gleich bleibt.
+* Den Spaltennamen in der Datenbank für den Eintrag der Benutzer ID (hier im Beispiel: `user_id`). Beachte, dass der letzte Teil hinter (`req.file.filename`) gleich bleibt: `user.id]);`
 
