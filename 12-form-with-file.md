@@ -1,5 +1,7 @@
 # Formulare (mit Dateiupload)
 
+Nebst der folgenden Github Dokumentation, gibt es die interaktive Anleitung: https://backend.bbz.cloud/topics/12_fileupload
+
 Um über ein Formular Daten erfassen zu können brauchen wir zuerst eine Seite, in der das Formular angezeigt wird. Das kann entweder in einer bestehenden Handlebars-Datei oder in einer neuen sein.
 Wir gehen davon aus, dass wir eine neue Datei brauchen.
 
